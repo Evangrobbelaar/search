@@ -1,11 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>search new</title>
+    <title>Google Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #logo {
+            display: block;
+            margin: 30px auto; /* Adjust the margin as needed */
+            width: 200px; /* Adjust the width as needed */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #nav_bar {
+            float: right;
+        }
+
+        #nav_bar li {
+            display: inline-block;
+            padding: 8px;
+        }
+
+        #nav_bar #sign_in {
+            background: #4887ef;
+            margin-right: 25px;
+            padding: 7px 15px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            color: #404040;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li.nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        #sign_in:hover {
+            box-shadow: 1px 1px 5px #999;
+        }
+
+        #sign_in {
+            color: #fff;
+        }
+
+        .form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #form-search {
+            width: 300px; /* Adjust the width as needed */
+            line-height: 32px;
+            padding: 10px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-bottom: 300px;
+            color: #4887ef;
+        }
+
+        footer {
+            background: #f2f2f2;
+            border-top: solid 2px #e4e4e4;
+            bottom: 0;
+            padding-bottom: 0;
+            width: 100%;
+        }
+
+        footer ul li {
+            display: inline;
+            color: #666666;
+            font-size: 14px;
+            padding: 13px;
+        }
+
+        footer ul {
+            float: left;
+            padding: 1px;
+        }
+
+        footer ul a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            float: right;
+        }
+
+        @media screen and (max-width: 400px) {
+            li.nav-links a {
+                display: none;
+            }
+
+            #google_logo {
+                padding: 0;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            #form-search {
+                width: 80%;
+            }
+
+            footer {
+                bottom: 0;
+            }
+
+            footer ul {
+                float: none;
+                padding-bottom: 2px;
+            }
+
+            .footer-left {
+                text-align: center;
+                margin: auto;
+                padding-top: 10px;
+            }
+
+            .footer-right {
+                float: none;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 565px) {
+            li.nav-links a {
+                display: none;
+            }
+
+            #google_logo {
+                padding: 0;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            #form-search {
+                width: 80%;
+            }
+
+            footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+            }
+
+            footer ul {
+                float: none;
+                padding-bottom: 2px;
+            }
+
+            .footer-left {
+                text-align: center;
+                margin: auto;
+                padding-top: 10px;
+            }
+
+            .footer-right {
+                float: none;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <ul id="nav_bar">
+            <li><a class="nav-links" href="image.html">Image Search</a></li>
+            <li><a class="nav-links" href="advanced.html">Advanced Search</a></li>
+            <li><a id="sign_in" href="#">Sign In</a></li>
+        </ul>
+    </header>
+    <div>
+        <img src="/Untitled design (2).png" alt="Logo" id="logo">
+    </div>
+
+    <div class="form">
+        <form action="https://www.google.com/search" method="GET">
+            <input id="form-search" type="text" name="q" placeholder="Enter your search query">
+        </form>
+    </div>
+
+    <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">How Search Works</a></li>
+        </ul>
+
+        <div class="footer-right">
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
