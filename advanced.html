@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Google Search</title>
+    <title>Google Advanced Search</title>
     <style>
         
         body {
@@ -18,7 +18,7 @@
             list-style: none;
         }
         
-        
+       
         #nav_bar {
             float: right;
         }
@@ -57,7 +57,7 @@
             color: #fff;
         }
         
-        
+      
         .google #google_logo {
             text-align: center;
             display: block;
@@ -65,7 +65,6 @@
             clear: both;
             padding-top: 30px;
             padding-bottom: 1px;
-            
         }
         
         .form {
@@ -119,7 +118,7 @@
             float: right;
         }
         
-        
+       
         
         @media screen and (max-width: 400px) {
             li.nav-links a {
@@ -204,8 +203,8 @@
 <body>
     <header>
         <ul id="nav_bar">
+            <li><a class="nav-links" href="index.html">Google Search</a></li>
             <li><a class="nav-links" href="image.html">Image Search</a></li>
-            <li><a class="nav-links" href="advanced.html">Advanced Search</a></li>
             <li><a id="sign_in" href="#">Sign In</a></li>
         </ul>
     </header>
@@ -217,13 +216,29 @@
         
         <div class="form">
             <form action="https://www.google.com/search" method="GET">
-                <input id="form-search" type="text" name="q" placeholder="Enter your search query">
+                <div>
+                    <label for="all-words">Find pages with... "all these words:"</label>
+                    <br>
+                    <input type="text" id="all-words" name="q" placeholder="Enter words">
+                </div>
+                <div>
+                    <label for="exact-phrase">Find pages with... "this exact word or phrase:"</label>
+                    <br>
+                    <input type="text" id="exact-phrase" name="as_epq" placeholder="Enter phrase">
+                </div>
+                <div>
+                    <label for="any-words">Find pages with... "any of these words:"</label>
+                    <br>
+                    <input type="text" id="any-words" name="as_oq" placeholder="Enter words">
+                </div>
+                <div>
+                    <label for="none-words">Find pages with... "none of these words:"</label>
+                    <br>
+                    <input type="text" id="none-words" name="as_eq" placeholder="Enter words">
+                </div>
+                <br>
+                <input type="submit" value="Advanced Search">
             </form>
-        </div>
-        
-        <div class="buttons">
-            <button>Google Search</button>
-            <button>I'm Feeling Lucky</button>
         </div>
     </div>
     
